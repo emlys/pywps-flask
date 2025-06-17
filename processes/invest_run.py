@@ -85,14 +85,15 @@ def generate_model_outputs(MODEL_SPEC):
         elif isinstance(model_output, spec.CSVOutput):
             data_format = FORMATS.CSV
         elif isinstance(model_output, spec.FileOutput):
-            data_format = None # FORMATS.HTML todo?
+            data_format = FORMATS.CSV # placeholder
         elif isinstance(model_output, spec.DirectoryOutput):
-            data_format = None  # todo?
+            data_format = FORMATS.CSV # placeholder
         else:
             print(model_output)
         outputs.append(ComplexOutput(  # all model outputs are files
             identifier=model_output.id,
             title=model_output.id,
+            supported_formats=[data_format],
             data_format=data_format,
             abstract=model_output.about))
     return outputs
