@@ -37,7 +37,7 @@ class Buffer(unittest.TestCase):
 
         self.schema_url = 'http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd'
         self.url = URL
-        resp = get_response('http://localhost:5000/static/requests/execute_buffer_post.xml')
+        resp = get_response('http://127.0.0.1:5000/static/requests/execute_buffer_post.xml')
         self.request_data = resp.read()
 
     def test_valid(self):
