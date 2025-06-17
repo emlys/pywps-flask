@@ -9,4 +9,4 @@ Shapely
 Werkzeug
 SQLAlchemy
 psutil
-pywps
+pywps@git+https://github.com/emlys/pywps
